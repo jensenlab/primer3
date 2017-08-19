@@ -1,0 +1,15 @@
+Package: primer3
+Type: Package
+Title: Thermodynamic calculations for oligos using Primer3
+Version: 1.0
+Date: 2017-08-17
+Author: Paul Jensen
+Maintainer: Paul Jensen <software@jensenlab.net>
+Description: This package provides a direct interface to the thermodynamic
+  calculations in Primer3 (melting temperatures, primer dimers, secondary
+  structures, etc.). The package is self-contained and does not require a
+  separate installation of Primer3.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.11)
+LinkingTo: Rcpp
+RoxygenNote: 6.0.1

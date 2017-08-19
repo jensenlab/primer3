@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
+library(primer3)
+```
+
+# primer3
+
+primer3 provides a direct interface to the thermodynamic
+  calculations in Primer3 (melting temperatures, primer dimers, secondary
+  structures, etc.). The package is self-contained and does not require a
+  separate installation of Primer3.
+
+## Overview
+
+primer3 contains four functions:
+
+```{r eval=FALSE}
+calculate_tm()
+calculate_hairpin()
+calculate_homodimer()
+calculate_dimer()
+```
+
+See the function documentation for details on inputs and usage.
+
+## Installation
+```{r, eval = FALSE}
+# Install the latest version directly from GitHub
+install.packages("devtools")
+devtools::install_github("jensenlab/primer3")
+```
+
+## Usage
+```{r}
+calculate_tm(c("AAGCCGCGTACGA", "AAGAGCGATGACG"))
+
+calculate_hairpin("CCCCCATCCGATCAGGGGG")
+```
+
+## Acknowledgements
+
+primer3 builds on [Primer3](http://primer3.sourceforge.net) and modifications
+made by the [primer3-py](https://github.com/libnano/primer3-py) project.
+

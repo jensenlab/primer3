@@ -1,0 +1,13 @@
+/src/*.o
+/src/*.o-*
+/src/*.d
+/src/*.so
+*.dll
+.RData
+.Rproj.user
+.Rhistory
+inst/doc
+.httr-oauth
+vignettes/*.R
+.DS_Store
+
