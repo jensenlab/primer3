@@ -79,15 +79,15 @@ calculate_tm <- function(oligos,
 #' configuration files will need to be reloaded during subsequent calls.
 #' 
 #' @param config_path Path to Primer3 configuration files. These are installed by default with
-#' this package. The path must end with a "\code{/}".
+#' this package. The path must not end with a "\code{/}".
 #' 
 #' @name init
 NULL
 
 #' @rdname init
 #' @export
-primer3_init <- function(config_path=system.file("extdata/primer3_config/", package="primer3")) {
-  invisible(call_thal_init(config_path))
+primer3_init <- function(config_path=system.file("extdata/primer3_config", package="primer3")) {
+  invisible(call_thal_init(paste0(config_path, .Platform$file.sep)))
 }
 
 #' @rdname init

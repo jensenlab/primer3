@@ -6,14 +6,14 @@
 \alias{primer3_free}
 \title{Loading Primer3 configuration files}
 \usage{
-primer3_init(config_path = system.file("extdata/primer3_config/", package =
+primer3_init(config_path = system.file("extdata/primer3_config", package =
   "primer3"))
 
 primer3_free()
 }
 \arguments{
 \item{config_path}{Path to Primer3 configuration files. These are installed by default with
-this package. The path must end with a "\code{/}".}
+this package. The path must not end with a "\code{/}".}
 }
 \description{
 For all functions besides \code{calculate_tm}, Primer3 requires initialization to
