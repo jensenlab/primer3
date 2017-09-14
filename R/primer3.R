@@ -20,7 +20,7 @@ NULL
 #' @param salt_conc Monovalent salt concentration in mM.
 #' @param divalent_conc Divalent ion concentration in mM.
 #' @param dntp_conc dNTP concentration in mM.
-#' @param dna_conc DNA concentration in mM.
+#' @param dna_conc DNA concentration in nM.
 #' @param nn_max_len Tm for oligos up to this length will be calculated using a nearest-neighbor
 #' method. Beyond this length, the Tm is extrapolated based on GC content.
 #' @param tm_method Method for Tm calculations. Options include "Breslauer" and "SantaLucia". 
