@@ -2,26 +2,26 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 call_oligo_tm <- function(oligos, mv, dv, dntp, dna, tp, sc) {
-    .Call('primer3_call_oligo_tm', PACKAGE = 'primer3', oligos, mv, dv, dntp, dna, tp, sc)
+    .Call('_primer3_call_oligo_tm', PACKAGE = 'primer3', oligos, mv, dv, dntp, dna, tp, sc)
 }
 
 call_seq_tm <- function(oligos, mv, dv, dntp, dna, nn_max_len, tp, sc) {
-    .Call('primer3_call_seq_tm', PACKAGE = 'primer3', oligos, mv, dv, dntp, dna, nn_max_len, tp, sc)
+    .Call('_primer3_call_seq_tm', PACKAGE = 'primer3', oligos, mv, dv, dntp, dna, nn_max_len, tp, sc)
 }
 
 is_thal_init <- function() {
-    .Call('primer3_is_thal_init', PACKAGE = 'primer3')
+    .Call('_primer3_is_thal_init', PACKAGE = 'primer3')
 }
 
 call_thal_init <- function(config_path) {
-    .Call('primer3_call_thal_init', PACKAGE = 'primer3', config_path)
+    .Call('_primer3_call_thal_init', PACKAGE = 'primer3', config_path)
 }
 
 call_thal_free <- function() {
-    invisible(.Call('primer3_call_thal_free', PACKAGE = 'primer3'))
+    invisible(.Call('_primer3_call_thal_free', PACKAGE = 'primer3'))
 }
 
 call_thal <- function(oligo1, oligo2, debug, alignment_type, maxloop, mv, dv, dntp, dna, temp, temp_only, dimer, print_output) {
-    .Call('primer3_call_thal', PACKAGE = 'primer3', oligo1, oligo2, debug, alignment_type, maxloop, mv, dv, dntp, dna, temp, temp_only, dimer, print_output)
+    .Call('_primer3_call_thal', PACKAGE = 'primer3', oligo1, oligo2, debug, alignment_type, maxloop, mv, dv, dntp, dna, temp, temp_only, dimer, print_output)
 }
 

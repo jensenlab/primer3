@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // call_oligo_tm
 NumericVector call_oligo_tm(CharacterVector oligos, double mv, double dv, double dntp, double dna, int tp, int sc);
-RcppExport SEXP primer3_call_oligo_tm(SEXP oligosSEXP, SEXP mvSEXP, SEXP dvSEXP, SEXP dntpSEXP, SEXP dnaSEXP, SEXP tpSEXP, SEXP scSEXP) {
+RcppExport SEXP _primer3_call_oligo_tm(SEXP oligosSEXP, SEXP mvSEXP, SEXP dvSEXP, SEXP dntpSEXP, SEXP dnaSEXP, SEXP tpSEXP, SEXP scSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -24,7 +24,7 @@ END_RCPP
 }
 // call_seq_tm
 NumericVector call_seq_tm(CharacterVector oligos, double mv, double dv, double dntp, double dna, int nn_max_len, int tp, int sc);
-RcppExport SEXP primer3_call_seq_tm(SEXP oligosSEXP, SEXP mvSEXP, SEXP dvSEXP, SEXP dntpSEXP, SEXP dnaSEXP, SEXP nn_max_lenSEXP, SEXP tpSEXP, SEXP scSEXP) {
+RcppExport SEXP _primer3_call_seq_tm(SEXP oligosSEXP, SEXP mvSEXP, SEXP dvSEXP, SEXP dntpSEXP, SEXP dnaSEXP, SEXP nn_max_lenSEXP, SEXP tpSEXP, SEXP scSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -42,7 +42,7 @@ END_RCPP
 }
 // is_thal_init
 int is_thal_init();
-RcppExport SEXP primer3_is_thal_init() {
+RcppExport SEXP _primer3_is_thal_init() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -52,7 +52,7 @@ END_RCPP
 }
 // call_thal_init
 int call_thal_init(CharacterVector config_path);
-RcppExport SEXP primer3_call_thal_init(SEXP config_pathSEXP) {
+RcppExport SEXP _primer3_call_thal_init(SEXP config_pathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -63,7 +63,7 @@ END_RCPP
 }
 // call_thal_free
 void call_thal_free();
-RcppExport SEXP primer3_call_thal_free() {
+RcppExport SEXP _primer3_call_thal_free() {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     call_thal_free();
@@ -72,7 +72,7 @@ END_RCPP
 }
 // call_thal
 List call_thal(CharacterVector oligo1, CharacterVector oligo2, int debug, int alignment_type, int maxloop, double mv, double dv, double dntp, double dna, double temp, int temp_only, int dimer, int print_output);
-RcppExport SEXP primer3_call_thal(SEXP oligo1SEXP, SEXP oligo2SEXP, SEXP debugSEXP, SEXP alignment_typeSEXP, SEXP maxloopSEXP, SEXP mvSEXP, SEXP dvSEXP, SEXP dntpSEXP, SEXP dnaSEXP, SEXP tempSEXP, SEXP temp_onlySEXP, SEXP dimerSEXP, SEXP print_outputSEXP) {
+RcppExport SEXP _primer3_call_thal(SEXP oligo1SEXP, SEXP oligo2SEXP, SEXP debugSEXP, SEXP alignment_typeSEXP, SEXP maxloopSEXP, SEXP mvSEXP, SEXP dvSEXP, SEXP dntpSEXP, SEXP dnaSEXP, SEXP tempSEXP, SEXP temp_onlySEXP, SEXP dimerSEXP, SEXP print_outputSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -95,12 +95,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"primer3_call_oligo_tm", (DL_FUNC) &primer3_call_oligo_tm, 7},
-    {"primer3_call_seq_tm", (DL_FUNC) &primer3_call_seq_tm, 8},
-    {"primer3_is_thal_init", (DL_FUNC) &primer3_is_thal_init, 0},
-    {"primer3_call_thal_init", (DL_FUNC) &primer3_call_thal_init, 1},
-    {"primer3_call_thal_free", (DL_FUNC) &primer3_call_thal_free, 0},
-    {"primer3_call_thal", (DL_FUNC) &primer3_call_thal, 13},
+    {"_primer3_call_oligo_tm", (DL_FUNC) &_primer3_call_oligo_tm, 7},
+    {"_primer3_call_seq_tm", (DL_FUNC) &_primer3_call_seq_tm, 8},
+    {"_primer3_is_thal_init", (DL_FUNC) &_primer3_is_thal_init, 0},
+    {"_primer3_call_thal_init", (DL_FUNC) &_primer3_call_thal_init, 1},
+    {"_primer3_call_thal_free", (DL_FUNC) &_primer3_call_thal_free, 0},
+    {"_primer3_call_thal", (DL_FUNC) &_primer3_call_thal, 13},
     {NULL, NULL, 0}
 };
 

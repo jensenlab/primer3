@@ -8,9 +8,9 @@
 \alias{calculate_dimer}
 \title{Thermodynamic calculations with Primer3}
 \usage{
-calculate_tm(oligos, salt_conc = 50, divalent_conc = 0, dntp_conc = 0,
-  dna_conc = 50, nn_max_len = 60, tm_method = "SantaLucia",
-  salt_correction = "SantaLucia")
+calculate_tm(oligos, salt_conc = 50, divalent_conc = 0,
+  dntp_conc = 0, dna_conc = 50, nn_max_len = 60,
+  tm_method = "SantaLucia", salt_correction = "SantaLucia")
 
 calculate_hairpin(oligo, ...)
 
@@ -28,7 +28,7 @@ than repeated calls with single oligos.}
 
 \item{dntp_conc}{dNTP concentration in mM.}
 
-\item{dna_conc}{DNA concentration in mM.}
+\item{dna_conc}{DNA concentration in nM.}
 
 \item{nn_max_len}{Tm for oligos up to this length will be calculated using a nearest-neighbor
 method. Beyond this length, the Tm is extrapolated based on GC content.}

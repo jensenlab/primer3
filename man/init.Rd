@@ -6,8 +6,8 @@
 \alias{primer3_free}
 \title{Loading Primer3 configuration files}
 \usage{
-primer3_init(config_path = system.file("extdata/primer3_config", package =
-  "primer3"))
+primer3_init(config_path = system.file("extdata/primer3_config", package
+  = "primer3"))
 
 primer3_free()
 }
