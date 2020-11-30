@@ -141,3 +141,16 @@ calculate_dimer <- function(oligo1, oligo2, ...) {
   thal(oligo1, oligo2, ..., alignment_type = 1L)
 }
 
+#' @export
+run_primer3 <- function(input, path=".", exec="primer3_core", temp="TEMP_input.txt") {
+  boulderio::write_boulder(input, file=temp)
+  prev <- getwd()
+  full_temp <- file.path(prev, temp)
+  setwd(path)
+  output <- system(paste(exec, "<", full_temp), intern=TRUE)
+  
+  setwd(prev)
+  file.remove(temp)
+  
+  return(boulderio::parse_boulder(output))
+}
